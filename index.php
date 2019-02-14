@@ -192,29 +192,12 @@ switch (ENVIRONMENT)
 
 require __DIR__.'\vendor\autoload.php';
 use Kreait\Firebase\Factory;
- 
 use Kreait\Firebase\ServiceAccount;
- 
- 
- 
-// This assumes that you have placed the Firebase credentials in the same directory
- 
-// as this PHP file.
- 
 $serviceAccount = ServiceAccount::fromJsonFile(__DIR__ . '\secret\thriffshop-firebase-adminsdk-z5a59-86e31646f8.json');
- 
- 
- 
 $firebase = (new Factory)
- 
    ->withServiceAccount($serviceAccount)
- 
    ->withDatabaseUri('https://thriffshop.firebaseio.com')
- 
    ->create();
- 
- 
- 
 $database = $firebase->getDatabase();
 
 	// Set the current directory correctly for CLI requests
