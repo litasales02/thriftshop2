@@ -3,7 +3,7 @@
 class General extends CI_Model {
 	function __construct(){
 		$this->load->database();			
-		$this->load->helper('email');
+		// $this->load->helper('email');
 		$this->load->library('session');	
 	}
 	public function RandomString($length = 5) {

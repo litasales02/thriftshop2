@@ -7,7 +7,7 @@
                             <img src="/assets/img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>Administrator</p>
+                            <p><?php echo isset($user_name)?$user_name:'Hi Guest' ?></p>
                         </div>
                     </div> 
                     <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -24,25 +24,28 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> New</a></li>
-                                <li><a href="pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> List</a></li> 
-                            </ul>
-                        </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-group"></i>
-                                <span>Buyer</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> New</a></li>
-                                <li><a href="pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> List</a></li> 
+                                <li>
+                                    <a href="/pages/new/added/sellers"><i class="fa fa-angle-double-right"></i> New Added                                    
+                                        <small class="badge pull-right bg-yellow"><?php echo isset($sellernew)?$sellernew:0; ?></small>    
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/pages/list/sellers"><i class="fa fa-angle-double-right"></i> List                                                    
+                                        <small class="badge pull-right bg-yellow"><?php echo isset($seller)?$seller:0; ?></small>
+                                    </a>            
+                                </li> 
                             </ul>
                         </li> 
                         <li>
-                            <a href="pages/mailbox.html">
+                            <a href="/pages/list/buyer">
+                                <i class="fa fa-list"></i> <span>Buyer List</span>
+                                <small class="badge pull-right bg-yellow"><?php echo isset($buyer)?$buyer:0; ?></small>
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="/pages/list/messages">
                                 <i class="fa fa-envelope"></i> <span>Messages</span>
-                                <small class="badge pull-right bg-yellow">12</small>
+                                <small class="badge pull-right bg-yellow">0</small>
                             </a>
                         </li> 
                     </ul>

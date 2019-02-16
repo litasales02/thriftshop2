@@ -1,4 +1,5 @@
 <?php
+// session_start(); 
 /**
  * CodeIgniter
  *
@@ -190,15 +191,8 @@ switch (ENVIRONMENT)
  * ---------------------------------------------------------------
  */
 
-require __DIR__.'\vendor\autoload.php';
-use Kreait\Firebase\Factory;
-use Kreait\Firebase\ServiceAccount;
-$serviceAccount = ServiceAccount::fromJsonFile(__DIR__ . '\secret\thriffshop-firebase-adminsdk-z5a59-86e31646f8.json');
-$firebase = (new Factory)
-   ->withServiceAccount($serviceAccount)
-   ->withDatabaseUri('https://thriffshop.firebaseio.com')
-   ->create();
-$database = $firebase->getDatabase();
+
+
 
 	// Set the current directory correctly for CLI requests
 	if (defined('STDIN'))
@@ -244,7 +238,6 @@ $database = $firebase->getDatabase();
 
 	// Name of the "system" directory
 	define('SYSDIR', basename(BASEPATH));
-
 	// The path to the "application" directory
 	if (is_dir($application_folder))
 	{
