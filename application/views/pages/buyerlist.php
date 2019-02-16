@@ -2,7 +2,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            New Seller 
+            Buyer
         </h1>
         <ol class="breadcrumb">
             <li><a href="active"><i class="fa fa-list"></i> Buyer List</a></li>
