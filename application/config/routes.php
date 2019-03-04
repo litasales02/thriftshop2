@@ -12,6 +12,7 @@ $route['pages/details/sellers/(:any)'] = 'admin/sellerdetails';
 $route['pages/details/new/added/sellers/(:any)'] = 'admin/selleraddeddetails';
 $route['pages/accept/new/added/sellers/(:any)'] = 'admin/selleraddedaccept';
 
+$route['pages/message/panel/sellers/(:any)'] = 'admin/messagepanelseller';
 
 $route['pages/list/buyer'] = 'admin/buyerlist';
 $route['pages/list/messages'] = 'admin/messageslist';

@@ -151,6 +151,22 @@ class Admin extends CI_Controller {
 		$this->load->view('pages/messagepanel'); 
 		$this->load->view('inc/foot');
 	}  
+	public function messagepanelseller(){
+		$this->load->model('Admin_model');	 
+		$keyid = $this->uri->segment(5);
+		$this->temp['keyid'] = $keyid;
+		$this->temp['data'] = $this->Admin_model->getmessages($keyid); 
+		$this->load->view('inc/head',$this->temp);
+		$this->load->view('inc/nav-top');
+		$this->load->view('inc/nav-side');
+		$this->load->view('pages/messagepanel'); 
+		$this->load->view('inc/foot');
+	}  
+	public function sendmessages(){
+		$this->load->model('Admin_model');	 
+		$keyid = $this->uri->segment(5);
+		$this->temp['data'] = $this->Admin_model->sentmessages($keyid);  
+	}
 	public function logout(){
 		$this->General->logout();		
 		header("location: " . base_url());

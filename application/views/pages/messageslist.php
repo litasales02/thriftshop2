@@ -49,7 +49,7 @@
                                     <td>Tel : <?php echo $value['userdetails']['telnumber']; ?>, Cell : <?php echo $value['userdetails']['cellnumber']; ?></td>
                                     <td>Seller</td>
                                     <td>
-                                        <a href="/pages/details/sellers/<?php echo $key; ?>" class="btn btn-info" >Messages</a>
+                                        <a href="/pages/message/panel/sellers/<?php echo $key; ?>" class="btn btn-info" >Messages</a>
                                     </td> 
                                 </tr>
                             <?php $x++; 

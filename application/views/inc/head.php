@@ -23,6 +23,7 @@
         <!-- Theme style -->
         <link href="<?php echo base_url(); ?>/assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
+        <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>

@@ -44,6 +44,8 @@ class Admin_Model extends CI_Model {
 	public function updatesellerstatus($key){
 		$this->database->getReference('maindata/'. $key . "/requirements")->update(['status'=>1]);
 		return true;
+	}	
+	public function getmessages($key){
+		return $this->database->getReference('admindata/messages/'. $key)->getValue();
 	}
-	
 }	
