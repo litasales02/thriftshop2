@@ -19,12 +19,14 @@ class Admin extends CI_Controller {
 			$seller = 0;
 			$sellernew = 0;
 			foreach ($dataall as $key => $value) { 
-				if($value['usertype'] === 'buyer'){ 
-					$buyer++;
-				}else if($value['usertype'] === 'seller'  && $value['requirements']['status'] == 1){ 
-					$seller++;
-				}else if($value['usertype'] === 'seller'  && $value['requirements']['status'] == 0){ 
-					$sellernew++;
+				if(isset($value['usertype'])){
+					if($value['usertype'] === 'buyer'){ 
+						$buyer++;
+					}else if($value['usertype'] === 'seller'  && $value['requirements']['status'] == 1){ 
+						$seller++;
+					}else if($value['usertype'] === 'seller'  && $value['requirements']['status'] == 0){ 
+						$sellernew++;
+					}
 				}
 			}
 			$this->temp['buyer'] = $buyer;
