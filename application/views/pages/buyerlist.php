@@ -36,11 +36,11 @@
                             <?php if(isset($data) && $data != null){
                                 $x = 1;
                                 foreach ($data as $key => $value) { 
-                                    if($value['usertype'] === 'buyer'){  
+                                    if( isset($value['usertype'] ) && $value['usertype'] === 'buyer'){  
                             ?>
                                 <tr>
                                     <td style="width:50px;text-align:center"><?php echo $x ?></td>
-                                    <td><img src="<?php echo $value['userdetails']['profileimg']; ?>" width="40" height="40" /> </td>
+                                    <td><img src="<?php echo $value['userdetails']['profileimg']!=''?$value['userdetails']['profileimg']:'/assets/img/avatar.png'; ?>" width="40" height="40" /> </td>
                                     <td><?php echo $value['userdetails']['firstname'] . ' ' . $value['userdetails']['middlename'] . ' ' . $value['userdetails']['lastname'] ; ?></td>
                                     <td><?php echo $value['userdetails']['address']; ?></td>
                                     <td><?php echo $value['userdetails']['email']; ?></td>
