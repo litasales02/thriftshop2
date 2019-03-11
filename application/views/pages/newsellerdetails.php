@@ -73,19 +73,19 @@
                             </tr> 
                             <tr >
                                 <td >Gov. ID Type</td >
-                                <td ><?php echo $data['requirements']['idtype']; ?></td >
+                                <td ><?php echo isset($data['requirements']['idtype'])?$data['requirements']['idtype']:'None'; ?></td >
                             </tr> 
                             <tr >
                                 <td >Gov. ID Image</td >
-                                <td ><img src="<?php echo $data['requirements']['govid']; ?>"  width="200" height="200" /></td >
+                                <td ><img src="<?php echo isset($data['requirements']['govid'])?$data['requirements']['govid']:'None'; ?>"  width="200" height="200" /></td >
                             </tr> 
                             <tr >
                                 <td >Store Image</td >
-                                <td ><img src="<?php echo $data['requirements']['storeimg'];  ?>"  width="200" height="200" /></td >
+                                <td ><img src="<?php echo isset($data['requirements']['storeimg'])?$data['requirements']['storeimg']:'None';  ?>"  width="200" height="200" /></td >
                             </tr> 
                             <tr >
                                 <td >Store Geo Location</td >
-                                <td ><?php echo $data['requirements']['idtype']; ?></td >
+                                <td ><?php echo isset($data['requirements']['idtype'])?$data['requirements']['idtype']:'None'; ?></td >
                             </tr> 
                             <tr >
                                 <td  colspan="2" >
