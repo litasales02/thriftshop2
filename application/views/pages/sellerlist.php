@@ -41,7 +41,14 @@
                             ?>
                                 <tr>
                                     <td style="width:50px;text-align:center"><?php echo $x ?></td>
-                                    <td><img src="<?php echo $value['userdetails']['profileimg']; ?>" width="40" height="40" /> </td>
+                                    <?php
+                                        $uimage = '/assets/img/avatar.png';
+                                        if(isset($value['userdetails']['profileimg'])  && $value['userdetails']['profileimg'] != null ||  $value['userdetails']['profileimg'] != ""){
+                                            $uimage = $value['userdetails']['profileimg'];
+                                        }
+                                    
+                                    ?>
+                                    <td><img src="<?php echo $uimage ; ?>" width="40" height="40" /> </td>
                                     <td><?php echo $value['storename'] ; ?></td>
                                     <td><?php echo $value['userdetails']['address1']; ?></td>
                                     <td><?php echo $value['userdetails']['email']; ?></td>

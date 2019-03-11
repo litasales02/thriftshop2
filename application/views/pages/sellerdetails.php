@@ -29,12 +29,17 @@
                             // print_r($data);
                             // echo "</pre>";
                             // foreach ($data as $key => $value) { 
-                                if($data['usertype'] === 'seller' && $data['requirements']['status'] == 1){  
+                                if($data['usertype'] === 'seller' && $data['requirements']['status'] == 1){ 
+                                    $uimage = '/assets/img/avatar.png';
+                                    if(isset($data['userdetails']['profileimg'])  && $data['userdetails']['profileimg'] != null ||  $data['userdetails']['profileimg'] != ""){
+                                        $uimage = $data['userdetails']['profileimg'];
+                                    }
+                                     
                         ?>
                          
                             <tr >
                                 <td >Store Image</td >
-                                <td ><img src="<?php echo $data['userdetails']['profileimg']; ?>" width="100" height="100" /> </td >
+                                <td ><img src="<?php echo $uimage; ?>" width="100" height="100" /> </td >
                             </tr> 
                             <tr >
                                 <td >Store Name</td >
@@ -69,19 +74,19 @@
                             </tr> 
                             <tr >
                                 <td >Gov. ID Type</td >
-                                <td ><?php echo $data['requirements']['idtype']; ?></td >
+                                <td ><?php echo isset($data['requirements']['idtype'])?$data['requirements']['idtype']:'None'; ?></td >
                             </tr> 
                             <tr >
                                 <td >Gov. ID Image</td >
-                                <td ><img src="<?php echo $data['requirements']['govid']; ?>"  width="200" height="200" /></td >
+                                <td ><img src="<?php echo isset($data['requirements']['govid'])?$data['requirements']['govid']:'None'; ?>"  width="200" height="200" /></td >
                             </tr> 
                             <tr >
                                 <td >Store Image</td >
-                                <td ><img src="<?php echo $data['requirements']['storeimg'];  ?>"  width="200" height="200" /></td >
+                                <td ><img src="<?php echo isset($data['requirements']['storeimg'])?$data['requirements']['storeimg']:'None';  ?>"  width="200" height="200" /></td >
                             </tr> 
                             <tr >
                                 <td >Store Geo Location</td >
-                                <td ><?php echo $data['requirements']['idtype']; ?></td >
+                                <td ><?php echo isset( $data['requirements']['idtype'])? $data['requirements']['idtype']:'None'; ?></td >
                             </tr>  
                         <?php  } }  ?>
                         </table>

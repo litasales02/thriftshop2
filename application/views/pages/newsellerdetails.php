@@ -30,11 +30,15 @@
                             // echo "</pre>";
                             // foreach ($data as $key => $value) { 
                                 if($data['usertype'] === 'seller' && $data['requirements']['status'] == 0){  
+                                    $uimage = '/assets/img/avatar.png';
+                                if(isset($data['userdetails']['profileimg'])  && $data['userdetails']['profileimg'] != null ||  $data['userdetails']['profileimg'] != ""){
+                                    $uimage = $data['userdetails']['profileimg'];
+                                }
                         ?>
                          
                             <tr >
                                 <td >Store Image</td >
-                                <td ><img src="<?php echo $data['userdetails']['profileimg']; ?>" width="100" height="100" /> </td >
+                                <td ><img src="<?php echo $uimage; ?>" width="100" height="100" /> </td >
                             </tr> 
                             <tr >
                                 <td >Store Name</td >
