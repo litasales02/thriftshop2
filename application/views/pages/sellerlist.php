@@ -52,7 +52,7 @@
                                     <td><?php echo $value['storename'] ; ?></td>
                                     <td><?php echo $value['userdetails']['address1']; ?></td>
                                     <td><?php echo $value['userdetails']['email']; ?></td>
-                                    <td>Tel : <?php echo $value['userdetails']['telnumber']; ?>, Cell : <?php echo $value['userdetails']['cellnumber']; ?></td>
+                                    <td>Tel : <?php echo isset($value['userdetails']['telnumber'])?$value['userdetails']['telnumber']:'None'; ?>, Cell : <?php echo isset($value['userdetails']['cellnumber'])?$value['userdetails']['cellnumber']:'None'; ?></td>
                                     <td>
                                         <a href="/pages/details/sellers/<?php echo $key; ?>" class="btn btn-info" >Details</a>
                                     </td> 
