@@ -14,7 +14,7 @@ class Admin_Model extends CI_Model {
 		$serviceAccount = ServiceAccount::fromJsonFile('\xampp\htdocs\thriftshop\secret\thrftshp-firebase-adminsdk-4kx34-1b2fbcb683.json');
 		$firebase = (new Factory)
 		->withServiceAccount($serviceAccount)
-		->withDatabaseUri('https://thriffshop.firebaseio.com')
+		->withDatabaseUri('https://thrftshp.firebaseio.com')
 		->create();
 		$this->database = $firebase->getDatabase();
 		// $this->referencemaindata = $this->database->getReference('maindata');
