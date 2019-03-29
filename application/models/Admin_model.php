@@ -10,8 +10,8 @@ class Admin_Model extends CI_Model {
 	private $referenceadmindata;
 	function __construct(){
 		$this->load->model('General');
-		require '/xampp/htdocs/thriftshop/vendor/autoload.php';
-		$serviceAccount = ServiceAccount::fromJsonFile('/xampp/htdocs/thriftshop/secret/thriffshop-firebase-adminsdk-z5a59-99b51c8c20.json');
+		require '/var/www/thriftshop/vendor/autoload.php';
+		$serviceAccount = ServiceAccount::fromJsonFile('/var/www/thriftshop/secret/thriffshop-firebase-adminsdk-z5a59-99b51c8c20.json');
 		$firebase = (new Factory)
 		->withServiceAccount($serviceAccount)
 		->withDatabaseUri('https://thriffshop.firebaseio.com')
